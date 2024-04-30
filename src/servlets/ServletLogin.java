@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.DaoLogin;
 import model.ModelLogin;
 
-@WebServlet("/ServletLogin")
+@WebServlet(urlPatterns = { "/paginas/ServletLogin", "/ServletLogin" })
 public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -49,7 +49,7 @@ public class ServletLogin extends HttpServlet {
 
 					if (url == null || url.equals("null")) {
 
-						url = "paginas/home.jsp";
+						url = "paginas/menu.jsp";
 					}
 
 					RequestDispatcher dispatcher = request.getRequestDispatcher(url);
@@ -73,6 +73,6 @@ public class ServletLogin extends HttpServlet {
 
 			e.printStackTrace();
 		}
-	}
 
+	}
 }

@@ -40,5 +40,6 @@
     <div style="margin-top: 20px;"><a href="cadastrarUsuario.jsp" style="margin-left: 920px;">Cadastre-se</a></div>
     
      <h3>${msg }</h3>
+     <h3>${msg2 }</h3>
 </body>
 </html>
