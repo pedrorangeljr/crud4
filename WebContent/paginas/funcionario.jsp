@@ -49,7 +49,7 @@
 			</table>
 		</form>
 	</div>
-
+    <h3>${msg }</h3>
 	<br />
 	<br />
 
