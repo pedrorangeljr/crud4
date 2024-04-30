@@ -8,12 +8,13 @@
 </head>
 <body>
 
-	<h2>Cadastros</h2>
+	<h1>Cadastros</h1>
 
-	<ul style="font-size: 25px;">
-		<li><a href="">Cadastro de Alunos</a></li>
-		<li>segundo item</li>
-		<li>terceiro item</li>
+	<ul style="font-size: 20px;">
+	
+		<li><a href="paginas/funcionario.jsp">Cadastro Funcionários</a></li>
+		
+		
 	</ul>
 
 
