@@ -15,15 +15,15 @@
 	</center>
 	<div align="center">
 
-		<form action="" method="post">
+		<form action="<%=request.getContextPath()%>/ServletFuncionario" method="post">
 
 			<table border="1" cellpadding="5">
 
-				<input type="hidden" name="id" value="" />
+				<input type="hidden" name="id"  />
 
 				<tr>
 					<th>ID:</th>
-					<td><input type="text" name="id" id="id" placeholder="ID"
+					<td><input type="text" name="id" id="id" placeholder="ID" readonly="readonly"
 						size="45" value="" /></td>
 				</tr>
 				<tr>
