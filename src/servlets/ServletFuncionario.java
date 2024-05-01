@@ -32,8 +32,17 @@ public class ServletFuncionario extends HttpServlet {
 		try {
 			
 			String acao = request.getParameter("acao");
+			String funcionario = request.getParameter("funcionario");
 			
 			if(acao.equalsIgnoreCase("listarTodos")) {
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("paginas/funcionario.jsp");
+				request.setAttribute("funcionarios", daoFuncionario.listar());
+				dispatcher.forward(request, response);
+			}
+			else if(acao.equalsIgnoreCase("delete")) {
+				
+				daoFuncionario.deletar(funcionario);
 				
 				RequestDispatcher dispatcher = request.getRequestDispatcher("paginas/funcionario.jsp");
 				request.setAttribute("funcionarios", daoFuncionario.listar());

@@ -74,4 +74,30 @@ public class DaoFuncionario {
 		
 		return listar;
 	}
+	
+	/*Metodo deletar por ID*/
+	public void deletar(String id) {
+		
+		try {
+			
+			String sql = "delete from funcionario where id = '"+id+"'";
+			PreparedStatement delete = connection.prepareStatement(sql);
+			delete.execute();
+			
+			connection.commit();
+			
+		} catch (Exception e) {
+			
+			try {
+				
+				connection.rollback();
+				
+			} catch (SQLException e1) {
+				
+				e1.printStackTrace();
+			}
+			
+			e.printStackTrace();
+		}
+	}
 }

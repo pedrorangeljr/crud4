@@ -70,9 +70,9 @@
 					<td><c:out value="${funcionarios.matricula}"></c:out></td>
 					<td><c:out value="${funcionarios.profissao}"></c:out></td>
 					<td><a
-						href="ServletsContatos?acao=editar&contato=${funcionarios.id }" />Editar</a>
+						href="ServletFuncionario?acao=editar&funcionario=${funcionarios.id }" />Editar</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
-						href="ServletsContatos?acao=delete&contato=${funcionarios.id }"
+						href="ServletFuncionario?acao=delete&funcionario=${funcionarios.id }"
 						onclick="return confirm('Tem certeza que deseja excluir ?')">Excluir</a></td>
 				</tr>
 			</c:forEach>
