@@ -29,7 +29,21 @@ public class ServletFuncionario extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
+		try {
+			
+			String acao = request.getParameter("acao");
+			
+			if(acao.equalsIgnoreCase("listarTodos")) {
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("paginas/funcionario.jsp");
+				request.setAttribute("funcionarios", daoFuncionario.listar());
+				dispatcher.forward(request, response);
+			}
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 	
@@ -55,6 +69,7 @@ public class ServletFuncionario extends HttpServlet {
 			
 			request.setAttribute("msg", "Funcionario salvo com sucesso");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("paginas/funcionario.jsp");
+			request.setAttribute("funcionarios", daoFuncionario.listar());
 			dispatcher.forward(request, response);
 			
 		} catch (Exception e) {

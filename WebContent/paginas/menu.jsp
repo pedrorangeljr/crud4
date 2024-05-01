@@ -12,7 +12,7 @@
 
 	<ul style="font-size: 20px;">
 	
-		<li><a href="paginas/funcionario.jsp">Cadastro Funcionários</a></li>
+		<li><a href="<%=request.getContextPath()%>/ServletFuncionario?acao=listarTodos">Cadastro Funcionários</a></li>
 		
 		
 	</ul>

@@ -56,7 +56,7 @@ public class DaoFuncionario {
 		
 		List<ModelFuncionario> listar = new ArrayList<ModelFuncionario>();
 		
-		String sql = "select * from funcionario order by id asc";
+		String sql = "select * from \"funcionario\" order by id asc";
 		PreparedStatement select = connection.prepareStatement(sql);
 		ResultSet resultado = select.executeQuery();
 		
